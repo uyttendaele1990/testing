@@ -159,7 +159,7 @@ class CanViewBlogTest extends TestCase
         // delete request to controller
         $resp = $this->delete("/removePost/{$post->id}");
             // assert
-        //assert db doesnt have data anymore
+        //assert db doesnt have the post
         $this->assertDatabaseMissing('posts', [
             'title' => 'new title',
             'body' => 'new body'
